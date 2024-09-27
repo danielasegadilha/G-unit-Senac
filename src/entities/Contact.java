@@ -1,10 +1,10 @@
 package entities;
 
-public class Contato {
+public class Contact {
     private Long id;
-    private String nome;
+    private String name;
     private String email;
-    private String endereco;
+    private String adress;
 
     public Long getId() {
         return id;
@@ -12,11 +12,11 @@ public class Contato {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
     public String getEmail() {
         return email;
@@ -24,11 +24,11 @@ public class Contato {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getEndereco() {
-        return endereco;
+    public String getAdress() {
+        return adress;
     }
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
 
 
