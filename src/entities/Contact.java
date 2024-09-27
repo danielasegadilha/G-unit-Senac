@@ -2,22 +2,22 @@ package entities;
 
 public class Contact {
 
-    public Contact(long id, String name, String email, String adress) {
+    public Contact(int id, String name, String email, String adress) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.adress = adress;
     }
 
-    private Long id;
+    private int id;
     private String name;
     private String email;
     private String adress;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
     public String getName() {

@@ -30,8 +30,11 @@ public class ContactManager {
         return null;
     }
 
-    public void addContact(Contact newContact) {
-        this.contactList.add(newContact);
+    public Contact addContact(Contact newContact) {
+        if (newContact != null){
+        	this.contactList.add(newContact);
+        }
+        return newContact;
     }
 
     public boolean removeContact(int idContato) {
