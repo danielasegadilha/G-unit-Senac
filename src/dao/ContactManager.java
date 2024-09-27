@@ -48,7 +48,7 @@ public class ContactManager {
 
         return contactRemoved;
     }
-    public void clear() {
+    public void clean() {
         this.contactList.clear();
     }
 
