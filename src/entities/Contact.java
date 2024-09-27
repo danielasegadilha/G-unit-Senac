@@ -1,6 +1,14 @@
 package entities;
 
 public class Contact {
+
+    public Contact(long id, String name, String email, String adress) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.adress = adress;
+    }
+
     private Long id;
     private String name;
     private String email;
