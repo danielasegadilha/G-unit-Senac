@@ -33,8 +33,11 @@ public class ContactManager {
     public Contact addContact(Contact newContact) {
         if (newContact != null){
         	this.contactList.add(newContact);
+        	return newContact;
+        } else {
+        	return null;
         }
-        return newContact;
+        
     }
 
     public boolean removeContact(int idContato) {

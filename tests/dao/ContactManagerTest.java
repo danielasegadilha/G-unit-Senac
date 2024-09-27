@@ -148,14 +148,14 @@ public class ContactManagerTest {
 		
 		/*===================== Fase2: Execucao do Teste ===============================*/
 		
-		Contact searchedCreated =contactsManager.addContact(contact);
+		Contact createdContact =contactsManager.addContact(contact);
 		
 		/*===================== Fase3: Verificação e Análise ===============================*/
 		
-		assertThat(searchedCreated.getId(), is(3));
-		assertThat(searchedCreated.getName(), is("Juliana"));
-		assertThat(searchedCreated.getEmail(), is("juliana@email.com"));
-		assertThat(searchedCreated.getAdress(), is("Rua J, 300"));
+		assertThat(createdContact.getId(), is(3));
+		assertThat(createdContact.getName(), is("Juliana"));
+		assertThat(createdContact.getEmail(), is("juliana@email.com"));
+		assertThat(createdContact.getAdress(), is("Rua J, 300"));
 		assertThat(contactsManager.getContactList().size(), is(3));
 	}
 	
@@ -169,11 +169,11 @@ public class ContactManagerTest {
 	public void testAddContactIncorrectly() {		
 		/*===================== Fase2: Execucao do Teste ===============================*/
 		
-		Contact searchedCreated =contactsManager.addContact(null);
+		Contact createdContact =contactsManager.addContact(null);
 		
 		/*===================== Fase3: Verificação e Análise ===============================*/
 		
-		assertNull(searchedCreated);
+		assertNull(createdContact);
 		assertThat(contactsManager.getContactList().size(), is(2));
 	}
 	
