@@ -18,10 +18,10 @@ public class ContactManager {
     }
 
     public Contact searchContact(int idContact) {
-        Iterator var3 = this.contactList.iterator();
+        Iterator<Contact> var3 = this.contactList.iterator();
 
         while(var3.hasNext()) {
-            Contact contact = (Contact)var3.next();
+            Contact contact = var3.next();
             if (contact.getId() == idContact) {
                 return contact;
             }
@@ -43,14 +43,9 @@ public class ContactManager {
     public boolean removeContact(int idContato) {
         boolean contactRemoved = false;
 
-        for(int i = 0; i < this.contactList.size(); ++i) {
-            Contact contact = (Contact)this.contactList.get(i);
-            if (contact.getId() == idContato) {
-                this.contactList.remove(i);
-                contactRemoved = true;
-                break;
-            }
-        }
+        Contact contact = this.searchContact(idContato);
+        this.contactList.remove(contact);
+        contactRemoved = true;
 
         return contactRemoved;
     }

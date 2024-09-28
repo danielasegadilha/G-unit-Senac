@@ -95,6 +95,7 @@ public class ContactManagerTest {
 		
 		/*===================== Fase3: Verificação e Análise ===============================*/
 		assertNull(searchedContact);
+		assertFalse(contactsManager.removeContact(18));
 	}
 	
 	/**
